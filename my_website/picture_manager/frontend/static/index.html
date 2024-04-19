@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website de Fotos</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}"> 
+    <link rel="stylesheet" href="style.css"> <!-- Adicione o link para o arquivo CSS -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Website de Fotos</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Galeria</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Conteúdo da página -->
+        <section id="gallery">
+            <h2>Galeria</h2>
+            <div class="photo-table">
+                <div class="photo-row">
+                    <div class="photo-cell">
+                        <img src="caminho_para_sua_foto.jpg" alt="Descrição da Foto">
+                        <p>Título da Foto</p>
+                    </div>
+                    <div class="photo-cell">
+                        <img src="caminho_para_sua_foto.jpg" alt="Descrição da Foto">
+                        <p>Título da Foto</p>
+                    </div>
+                    <div class="photo-cell">
+                        <img src="caminho_para_sua_foto.jpg" alt="Descrição da Foto">
+                        <p>Título da Foto</p>
+                    </div>
+                </div>
+                <!-- Adicione mais linhas e células conforme necessário -->
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Website de Fotos</p>
+        </div>
+    </footer>
+</body>
+</html>
