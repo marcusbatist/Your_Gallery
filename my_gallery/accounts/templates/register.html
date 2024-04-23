@@ -1,0 +1,21 @@
+
+<html>
+<head>
+ 
+  
+</head>
+<body>
+    
+    <form action="{% url 'register_usuario' %}" method="POST">{% csrf_token %}
+
+        <input type="text" placeholder="Username..." name="username">
+        <br>
+        <input type="email" placeholder="Email..." name="email">
+        <br>
+        <input type="password" placeholder="Password..." name="password">
+        <br>
+        <input type="submit" value="registro">
+
+    </form>
+</body>
+</html>
