@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Photo</title>
+</head>
+<body>
+    <h1>View Photo</h1>
+    <img src="{{ photo.image.url }}" alt="{{ photo.title }}">
+    <p>Title: {{ photo.title }}</p>
+    <p>Description: {{ photo.description }}</p>
+    <a href="{% url 'delete_photo' photo.id %}">Delete Photo</a>
+</body>
+</html>
