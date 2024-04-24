@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
@@ -33,7 +33,7 @@ def login_usuario(request):
         
         if user:
             login_django(request, user)
-            return HttpResponse('autenticado')
+            return redirect('gallery_view')
         else:
             return HttpResponse('Email ou Password inválidos')
 
