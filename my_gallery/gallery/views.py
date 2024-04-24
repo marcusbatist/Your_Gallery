@@ -1,4 +1,7 @@
 from django.shortcuts import render
+from .models import Photo
 
-def visualizar_gallery(request):
-    return render(request, 'gallery.html')
+def gallery_view(request):
+    photos = Photo.objects.all()
+    return render(request, 'gallery/gallery.html', {'photos': photos})
+

@@ -1,2 +1,15 @@
+{% extends 'base.html' %}
 
-<h1>Gallery</h1>
+{% block content %}
+  <h1>Galeria de Fotos</h1>
+  <ul>
+  {% for photo in photos %}
+    <li>
+      <img src="{{ photo.image.url }}" alt="{{ photo.description }}">
+      <p>{{ photo.description }}</p>
+    </li>
+  {% empty %}
+    <li>Não há fotos disponíveis.</li>
+  {% endfor %}
+  </ul>
+{% endblock %}

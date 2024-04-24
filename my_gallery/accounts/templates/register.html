@@ -1,4 +1,19 @@
+{% extends 'my_gallery/base.html' %}
 
+{% block content %}
+<h1>Register</h1>
+<form action="{% url 'register_usuario' %}" method="POST">
+    {% csrf_token %}
+    <input type="text" placeholder="Username..." name="username">
+    <br>
+    <input type="email" placeholder="Email..." name="email">
+    <br>
+    <input type="password" placeholder="Password..." name="password">
+    <br>
+    <input type="submit" value="registro">
+</form>
+{% endblock %}
+<!--
 <html>
 <head>
  
@@ -19,3 +34,4 @@
     </form>
 </body>
 </html>
+-->

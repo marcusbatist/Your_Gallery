@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Your GalleryI</title>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'style.css' %}"/>
-
+    <meta charset="UTF-8">
+    <title>{% block title %}My Gallery{% endblock %}</title>
 </head>
-
 <body>
-  <h1>welcome to Your Gallery</h1>
-
-  <br>
-
-  <h2>send you best photos and share for world</h2>
-  
-  
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                <li><a href="{% url 'login_usuario' %}">Login</a></li>
+                <li><a href="{% url 'register_usuario' %}">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
 </body>
-
 </html>
