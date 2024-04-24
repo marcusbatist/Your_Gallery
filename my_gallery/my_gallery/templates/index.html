@@ -1,0 +1,6 @@
+{% extends 'my_gallery/base.html' %}
+
+{% block content %}
+<h1>Welcome to My Gallery</h1>
+<p>Please <a href="{% url 'login_usuario' %}">log in</a> or <a href="{% url 'register_usuario' %}">register</a> to continue.</p>
+{% endblock %}

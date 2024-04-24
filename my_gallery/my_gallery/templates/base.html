@@ -15,7 +15,13 @@
     </header>
     <main>
         {% block content %}
+            {% include 'accounts/login.html' %}
+            {% include 'accounts/register.html' %}
         {% endblock %}
     </main>
+    <footer>
+        {% block footer %}
+        {% endblock %}
+    </footer>
 </body>
 </html>
