@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+<!--{% extends 'base.html' %}
 {% csrf_token %}
 {% block content %}
   <h1>Galeria de Fotos</h1>
@@ -12,4 +12,35 @@
     <li>Não há fotos disponíveis.</li>
   {% endfor %}
   </ul>
-{% endblock %}
+{% endblock %}>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+</head>
+<body>
+    <h1>Gallery</h1>
+
+    <!-- Formulário para upload de fotos -->
+    <form method="POST" >
+        {% csrf_token %}
+        <input type="file" name="photo" accept="image/*" required>
+        <button type="submit">Upload Photo</button>
+    </form>
+
+    <!-- Lista de fotos -->
+    {% if photos %}
+        <div>
+            {% for photo in photos %}
+                <div>
+                    <img src="{{ photo.image.url }}" alt="Photo">
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Nenhuma foto disponível.</p>
+    {% endif %}
+</body>
+</html>
